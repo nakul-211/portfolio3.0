@@ -55,10 +55,17 @@ html {
   height: 100%;
   width: 100%;
   overflow-x: hidden;
+  background-color: var(--color-brand--4);
 }
 body {
   cursor: none;
-  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.smooth-scroll-wrapper {
+  position: absolute;
+  top: 310%;
 }
 .cursor {
   width: 2.5rem;
@@ -176,7 +183,6 @@ body {
   height: 27rem;
   width: 45rem;
   background-color: #25413c;
-  border-radius: 0.4rem;
   /* height: 100%;
   width: 100%; */
   /* transform: scale(0.5); */
@@ -202,6 +208,7 @@ body {
   justify-content: center;
   position: relative;
   height: auto;
+  border-radius: 0.4rem;
   overflow-x: hidden;
   box-shadow: 0 0 2.4rem 1rem rgba(0, 0, 0, 0.3);
 }

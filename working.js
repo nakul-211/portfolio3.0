@@ -127,23 +127,21 @@ omnifoodBtnLeft.addEventListener("click", omnifoodPrevSlide);
 omnifoodGoToSlide(0);
 
 //smoot scroll
-// const body = document.body,
-const projectsSection = document.querySelector(".projects-section");
 const scrollWrap = document.getElementsByClassName("smooth-scroll-wrapper")[0],
   height = scrollWrap.getBoundingClientRect().height - 1,
   speed = 0.04;
 
-let offset = 0;
+let offset = -10;
 
 // body.style.height = Math.floor(height) + "px";
-// projectsSection.style.height = Math.floor(height) + "px";
-// function smoothScroll() {
-//   offset += (window.scrollY - offset) * speed;
 
-//   let scroll = "translateY(-" + offset + "px) translateZ(0)";
-//   scrollWrap.style.transform = scroll;
+function smoothScroll() {
+  offset += (window.scrollY - offset) * speed;
 
-//   callScroll = requestAnimationFrame(smoothScroll);
-// }
+  var scroll = "translateY(-" + offset + "px) translateZ(0)";
+  scrollWrap.style.transform = scroll;
 
-// smoothScroll();
+  callScroll = requestAnimationFrame(smoothScroll);
+}
+
+smoothScroll();
