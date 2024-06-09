@@ -90,8 +90,6 @@ paragraph default:1.6
   }
 }
 .winter_hero {
-  position: fixed;
-  top: 0;
   width: 100%;
   height: 100vh;
   transform-origin: center;
@@ -102,11 +100,12 @@ paragraph default:1.6
   display: flex;
   flex-direction: column;
   align-items: center;
+  z-index: 5;
   justify-content: center;
   gap: 1.25rem;
   @media (min-width: 1024px) {
     flex-direction: row;
-    padding: "20vh";
+    padding: 10vh;
     .winter_content {
       font-size: 2.125rem;
     }
