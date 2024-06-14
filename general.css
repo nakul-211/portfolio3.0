@@ -52,14 +52,14 @@ medium:11px
 }
 
 html {
-  height: 100%;
-  width: 100%;
   overflow-x: hidden;
   background-color: var(--color-brand--4);
 }
 body {
   cursor: none;
   position: relative;
+  height: 100%;
+  width: 100%;
   display: flex;
   flex-direction: column;
 }
@@ -67,6 +67,7 @@ body {
   position: absolute;
   top: 310%;
   z-index: 7;
+  height: 100%;
 }
 .cursor {
   width: 2.5rem;
@@ -145,7 +146,7 @@ body {
 .portfolio-content,
 .mapty-content,
 .omnifood-content {
-  font-size: 2rem;
+  font-size: 1.6rem;
   padding: 4rem;
   display: flex;
   flex-direction: column;
@@ -168,7 +169,7 @@ body {
 .mapty-carousel,
 .omnifood-carousel {
   height: auto;
-  width: 60rem;
+  width: 45rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -283,8 +284,9 @@ body {
   grid-template-columns: 1fr 1fr;
   column-gap: 2rem;
   background-color: var(--color-brand--2);
-  padding: 6rem 4rem;
+  padding: 4rem 2rem;
   /* height: 80vh; */
+  overflow: hidden !important;
 }
 .skills-content {
   display: flex;
@@ -292,7 +294,7 @@ body {
   justify-content: center;
   align-items: center;
   color: var(--color-brand--4);
-  gap: 3rem;
+  gap: 1rem;
 }
 .skills-content .section-header {
   color: var(--color-brand--3);
@@ -307,27 +309,42 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   /* padding: 1rem; */
-  column-gap: 2rem;
+  column-gap: 4rem;
   text-align: center;
-  row-gap: 2rem;
-  /* justify-items: center; */
+  row-gap: 4rem;
+  align-self: flex-start;
 }
 .skill {
   /* color: var(--color-brand--3); */
-  font-size: 6rem;
+  font-size: 4rem;
 }
 .soft-skills {
   font-family: "Colus", sans-serif;
   font-size: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
   /* color: var(--color-brand--3); */
 }
-.nakul-image {
-  transform: scale(0.7);
+.soft-skills h4 {
+  font-weight: var(--font-weight-2);
+  color: var(--color-brand--3);
+}
+.soft-skills p {
+  font-weight: var(--font-weight-1);
+}
+.circle-mask {
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow-x: hidden;
+  /* transform: scale(40%); */
 }
-.nakul-image img {
+.mask-container {
+  overflow: hidden;
   border-radius: 50%;
+  height: 10vw;
+  width: 10vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

@@ -123,7 +123,7 @@ paragraph default:1.6
   align-items: flex-start;
   justify-content: center;
   color: var(--color-brand--3);
-  font-size: 2rem;
+  font-size: 1.6rem;
   gap: 2.4rem;
 }
 .winter_hero .winter_content .winter_subHeader {
@@ -142,4 +142,5 @@ paragraph default:1.6
 }
 .winter_hero .winter_img img {
   max-width: 80%;
+  transform: scale(0.9);
 }
