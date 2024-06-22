@@ -126,22 +126,51 @@ omnifoodBtnRight.addEventListener("click", omnifoodNextSlide);
 omnifoodBtnLeft.addEventListener("click", omnifoodPrevSlide);
 omnifoodGoToSlide(0);
 
-//smoot scroll
-const scrollWrap = document.getElementsByClassName("smooth-scroll-wrapper")[0],
-  height = scrollWrap.getBoundingClientRect().height - 1,
-  speed = 0.04;
+gsap.registerPlugin(ScrollTrigger);
+function mask_cover() {
+  ScrollTrigger.refresh(true);
+  gsap.to(
+    ".mask-container",
 
-let offset = -10;
-
-// body.style.height = Math.floor(height) + "px";
-
-function smoothScroll() {
-  offset += (window.scrollY - offset) * speed;
-
-  var scroll = "translateY(-" + offset + "px) translateZ(0)";
-  scrollWrap.style.transform = scroll;
-
-  callScroll = requestAnimationFrame(smoothScroll);
+    {
+      scrollTrigger: {
+        trigger: ".skills-section",
+        start: "center bottom",
+        end: "bottom bottom",
+        scrub: 2,
+        toggleActions: "restart pause none none",
+      },
+      height: "30rem",
+      width: "30rem",
+    }
+  );
 }
+mask_cover();
 
-smoothScroll();
+function horizontalScroll() {
+  ScrollTrigger.refresh(true);
+
+  const totalWidth = window.innerWidth * 3;
+  let hs = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".horizontal-scroll-section",
+      pin: true,
+      scrub: 2,
+      markers: true,
+      start: "bottom bottom",
+      end: String(totalWidth),
+    },
+  });
+  hs.to(".horizontal-scroll-section", {
+    xPercent: -100,
+    ease: "none",
+    duration: 2,
+  });
+  hs.to(".animated-text", {
+    translateY: "-2.4rem",
+    pin: true,
+    scrub: 2,
+    duration: 1,
+  });
+}
+horizontalScroll();

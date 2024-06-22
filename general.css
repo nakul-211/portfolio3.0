@@ -53,21 +53,16 @@ medium:11px
 
 html {
   overflow-x: hidden;
-  background-color: var(--color-brand--4);
+  /* background-color: var(--color-brand--4); */
 }
 body {
   cursor: none;
   position: relative;
   height: 100%;
   width: 100%;
+
   display: flex;
   flex-direction: column;
-}
-.smooth-scroll-wrapper {
-  position: absolute;
-  top: 310%;
-  z-index: 7;
-  height: 100%;
 }
 .cursor {
   width: 2.5rem;
@@ -88,7 +83,7 @@ body {
 }
 .grow,
 .grow-small {
-  transform: translate(-50%, -50%);
+  /* transform: translate(-50%, -50%); */
   transform: scale(5);
   background: var(--color-brand--4);
   mix-blend-mode: difference;
@@ -110,7 +105,7 @@ body {
   font-family: "Colus", sans-serif;
   display: flex;
   flex-direction: column;
-  padding: 10rem 8rem;
+  padding: 30rem 8rem 10rem 8rem;
   background-color: var(--color-brand--4);
   gap: 4rem;
 }
@@ -219,11 +214,6 @@ body {
   transition: transform 1s;
 }
 
-/* .portfolio-slide:nth-child(1) {
-  position: absolute;
-  top: 0%;
-  right: 0%;
-} */
 .portfolio-slide:nth-child(2),
 .mapty-slide:nth-child(2),
 .omnifood-slide:nth-child(2) {
@@ -248,7 +238,6 @@ body {
 .portfolio-slider__btn,
 .mapty-slider__btn,
 .omnifood-slider__btn {
-  font-family: inherit;
   position: absolute;
   transform: translate(-50%, -50%);
   display: flex;
@@ -284,9 +273,10 @@ body {
   grid-template-columns: 1fr 1fr;
   column-gap: 2rem;
   background-color: var(--color-brand--2);
-  padding: 4rem 2rem;
-  /* height: 80vh; */
-  overflow: hidden !important;
+  padding: 3.2rem 2rem;
+  height: 100vh;
+  font-family: "Colus", sans-serif;
+  /* overflow-y: hidden !important; */
 }
 .skills-content {
   display: flex;
@@ -319,7 +309,6 @@ body {
   font-size: 4rem;
 }
 .soft-skills {
-  font-family: "Colus", sans-serif;
   font-size: 1.6rem;
   display: flex;
   flex-direction: column;
@@ -337,14 +326,28 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  height: auto;
+  width: auto;
+  /* background-color: white; */
   /* transform: scale(40%); */
 }
 .mask-container {
-  overflow: hidden;
   border-radius: 50%;
-  height: 10vw;
-  width: 10vw;
+  overflow: hidden;
+  height: 15rem;
+  width: 15rem;
+  /* background-color: white; */
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.cover {
+  transform: scale(0.4);
+}
+
+/* horizontal scroll section*/
+.horizontal-scroll-section {
+  display: flex;
+  width: 300vw;
+  overflow: hidden !important;
 }
