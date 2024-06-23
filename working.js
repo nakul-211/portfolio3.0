@@ -142,35 +142,91 @@ function mask_cover() {
       },
       height: "30rem",
       width: "30rem",
+      duration: 2,
     }
   );
 }
 mask_cover();
 
+//horizontal scroll
+
 function horizontalScroll() {
   ScrollTrigger.refresh(true);
 
-  const totalWidth = window.innerWidth * 3;
-  let hs = gsap.timeline({
+  let hs = gsap
+    .timeline
+    //   {
+    //   scrollTrigger: {
+    //     trigger: ".horizontal-scroll-section",
+    //     pin: true,
+    //     scrub: 2,
+    //     markers: true,
+    //     start: "top top",
+    //     end: "150% center",
+    //   },
+    // }
+    ();
+  hs.to(
+    ".horizontal-scroll-section",
+    {
+      xPercent: -200 / 3,
+      scrollTrigger: {
+        trigger: ".skills-section",
+        start: "bottom bottom",
+        end: "bottom top",
+        // pinSpacing: true,
+        // markers: true,
+        scrub: 2,
+        // markers: true,
+        pin: ".horizontal-scroll-section",
+      },
+    },
+    "skill-scroll"
+  );
+  hs.to(".animated-text", {
+    left: "150vw",
+    top: "25vh",
+    ease: "none",
     scrollTrigger: {
-      trigger: ".horizontal-scroll-section",
-      pin: true,
-      scrub: 2,
-      markers: true,
+      trigger: ".skills-section",
       start: "bottom bottom",
-      end: String(totalWidth),
+      end: "bottom top",
+      markers: true,
+      scrub: 2,
+      pin: true,
+      // toggleActions: "restart pause pause pause",
+      // once: true,
+      // pinSpacing: true,
     },
   });
-  hs.to(".horizontal-scroll-section", {
-    xPercent: -100,
-    ease: "none",
-    duration: 2,
-  });
-  hs.to(".animated-text", {
-    translateY: "-2.4rem",
-    pin: true,
-    scrub: 2,
-    duration: 1,
-  });
+  // .to(
+  //   ".contact-section",
+  //   {
+  //     xPercent: -100,
+  //     scrollTrigger: {
+  //       trigger: ".contact-section",
+  //       end: "+=3000",
+  //       pinSpacing: true,
+  //       scrub: 2,
+  //       markers: true,
+  //       pin: ".animated-text",
+  //     },
+  //   },
+  //   ">"
+  // );
+  // .to(
+  //   ".animated-text",
+  //   {
+  //     translateY: "-6.4rem",
+  //     pin: ".contact-section",
+  //     scrub: 2,
+  //   },
+  //   ">"
+  // );
+  // .to(
+  //   ".contact-section",
+  //   { xPercent: -100 / 2, ease: "none", scrub: 2, pin: ".animated-text" },
+  //   ">"
+  // );
 }
 horizontalScroll();

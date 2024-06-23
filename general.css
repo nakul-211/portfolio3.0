@@ -275,6 +275,7 @@ body {
   background-color: var(--color-brand--2);
   padding: 3.2rem 2rem;
   height: 100vh;
+  width: 100vw;
   font-family: "Colus", sans-serif;
   /* overflow-y: hidden !important; */
 }
@@ -349,5 +350,14 @@ body {
 .horizontal-scroll-section {
   display: flex;
   width: 300vw;
-  overflow: hidden !important;
+  overflow: hidden;
+  background-color: var(--color-brand--1);
+  position: relative;
+}
+
+/*footer section*/
+.footer-section {
+  height: 100vh;
+  margin-top: 100vh;
+  background-color: var(--color-brand--4);
 }
