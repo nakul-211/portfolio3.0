@@ -1,32 +1,31 @@
 gsap.registerPlugin(ScrollTrigger);
-var tl = gsap.timeline({
-  scrollTrigger: {
-    trigger: ".winter_main",
-    start: "50% 50%",
-    end: "100% 50%",
-    // markers: true,
-    scrub: 2,
-    pin: true,
-    // toggleAction: "restart none none none pause",
-  },
-});
+function heroSection() {
+  let tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".winter_main",
+      start: "50% 50%",
+      end: "100% 50%",
+      scrub: 2,
+      aniticipatePin: 1,
+      // pin: ".winter_main",
+      pin: true,
+      pinSpacing: false,
+    },
+  });
 
-tl.to(".winter_hero", {}, "a")
-  .to(".winter_top", { top: "-50%" }, "a")
-  .to(".winter_bottom", { bottom: "-50%" }, "a")
-  .to(".winter_top-h1", { top: "60%" }, "a")
-  .to(".winter_bottom-h1", { bottom: "60%" }, "a")
-  .to(
-    ".winter_hero .winter_content",
-    { top: "-50%", delay: -0.4, margin: "0 0" },
-    "b"
-  )
-  .from(
-    ".winter_hero .winter_img",
-    { y: "100%", scale: 0, opacity: 0 },
-    "-=0.4"
-  );
-
+  tl.to(".winter_hero", {}, "a")
+    .to(".winter_top", { top: "-50%" }, "a")
+    .to(".winter_bottom", { bottom: "-50%" }, "a")
+    .to(".winter_top-h1", { top: "60%" }, "a")
+    .to(".winter_bottom-h1", { bottom: "60%" }, "a")
+    .to(
+      ".winter_hero .winter_content",
+      { top: "-50%", delay: -0.4, margin: "0 0" },
+      "b"
+    )
+    .from(".winter_hero .winter_img", { y: "100%", scale: 0, opacity: 0 });
+}
+heroSection();
 // function image_mask() {
 //   ScrollTrigger.refresh(true);
 //   gsap.to(".mask-container", {

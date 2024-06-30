@@ -1,0 +1,328 @@
+/*
+--- 01 TYPOGRAPHY SYSTEM
+
+- SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+    
+- FONT WEIGHTS:
+DEFAULT: 400
+medium:500
+semi bold:600
+bold:700        
+
+- LINE HEIGHTS:
+DEFAULT:1
+small:1.05
+paragraph default:1.6
+
+
+- FONT SIZE SYSTEM (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+
+--- 05 SHADOWS
+
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
+
+--- 06 BORDER RADIUS
+
+default:9px
+medium:11px
+
+--- 07 Whitespace
+
+- SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+*/
+@media (max-width: 160em) {
+  html {
+    font-size: 100%;
+  }
+  .portfolio-carousel-image img,
+  .mapty-carousel-image img,
+  .omnifood-carousel-image img {
+    transform: scale(0.35);
+  }
+  .cover {
+    transform: scale(0.6);
+  }
+}
+@media (max-width: 90em) {
+  html {
+    font-size: 100%;
+  }
+  .portfolio-carousel-image img,
+  .mapty-carousel-image img,
+  .omnifood-carousel-image img {
+    transform: scale(0.35);
+  }
+  .cover {
+    transform: scale(0.5);
+  }
+}
+@media (max-width: 85em) {
+  html {
+    font-size: 90%;
+  }
+  .winter_hero .winter_img img {
+    transform: scale(0.8);
+  }
+  .portfolio-content,
+  .mapty-content,
+  .omnifood-content {
+    font-size: 1.6rem;
+    padding: 2.4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+  }
+  .portfolio-carousel-image,
+  .mapty-carousel-image,
+  .omnifood-carousel-image {
+    height: 21rem;
+    width: 35rem;
+  }
+  .portfolio-carousel-image img,
+  .mapty-carousel-image img,
+  .omnifood-carousel-image img {
+    transform: scale(0.25);
+  }
+  .project-skill {
+    font-size: 3.4rem;
+  }
+  .cover {
+    transform: scale(0.35);
+  }
+  .skills-description {
+    gap: 3.2rem;
+  }
+  .skills {
+    column-gap: 3.2rem;
+    row-gap: 3.2rem;
+  }
+  .skill {
+    /* color: var(--color-brand--3); */
+    font-size: 3.2rem;
+  }
+  .soft-skills p {
+    font-size: 1.4rem;
+  }
+}
+@media (max-width: 69em) {
+  html {
+    font-size: 80%;
+  }
+  .projects-section {
+    padding: 10rem 6rem;
+  }
+  .portfolio1-project,
+  .mapty-project,
+  .omnifood-project {
+    padding: 4rem 2rem;
+  }
+  .portfolio-content,
+  .mapty-content,
+  .omnifood-content {
+    padding: 4.2rem;
+  }
+  /* .portfolio-carousel-image,
+  .mapty-carousel-image,
+  .omnifood-carousel-image {
+    height: 18rem;
+    width: 30rem;
+  } */
+  .portfolio-carousel-image img,
+  .mapty-carousel-image img,
+  .omnifood-carousel-image img {
+    transform: scale(0.22);
+  }
+}
+@media (max-width: 59em) {
+  html {
+    font-size: 70%;
+  }
+  .winter_hero {
+    padding: 6rem;
+  }
+  .winter_hero .winter_img img {
+    transform: scale(0.7);
+  }
+  .projects {
+    gap: 6rem;
+  }
+  .portfolio1-project,
+  .mapty-project,
+  .omnifood-project {
+    padding: 3.2rem 2.4rem;
+  }
+  .portfolio-content,
+  .mapty-content,
+  .omnifood-content {
+    padding: 2.4rem;
+  }
+  .portfolio-carousel-image img,
+  .mapty-carousel-image img,
+  .omnifood-carousel-image img {
+    transform: scale(0.2);
+  }
+  .skills-section {
+    padding: 2.4rem 2rem;
+  }
+  .cover {
+    transform: scale(0.25);
+  }
+}
+@media (max-width: 47em) {
+  .winter_hero .winter_img img {
+    transform: scale(0.6);
+  }
+  .projects-section {
+    padding: 10rem 4rem;
+  }
+  .portfolio1-project,
+  .mapty-project,
+  .omnifood-project {
+    padding: 3.2rem 2.4rem;
+  }
+  .portfolio-content,
+  .mapty-content,
+  .omnifood-content {
+    padding: 2.4rem;
+  }
+  .portfolio-carousel-image,
+  .mapty-carousel-image,
+  .omnifood-carousel-image {
+    height: 18rem;
+    width: 30rem;
+  }
+  .portfolio-carousel-image img,
+  .mapty-carousel-image img,
+  .omnifood-carousel-image img {
+    transform: scale(0.17);
+  }
+  .portfolio-slider__btn,
+  .mapty-slider__btn,
+  .omnifood-slider__btn {
+    height: 3rem;
+    width: 3rem;
+  }
+  .grow,
+  .grow-small {
+    display: none;
+  }
+}
+@media (max-width: 42.5em) {
+  html {
+    font-size: 60%;
+  }
+  .cursor {
+    display: none;
+  }
+  .nav-bar {
+    width: 90vw;
+    font-size: 1.2rem;
+  }
+  .blendDiff {
+    padding: 0.2rem;
+  }
+  .projects-section {
+    padding: 6rem 2rem;
+  }
+  .portfolio-content,
+  .mapty-content,
+  .omnifood-content {
+    gap: 1.4rem;
+  }
+  .portfolio-carousel-image img,
+  .mapty-carousel-image img,
+  .omnifood-carousel-image img {
+    transform: scale(0.14);
+  }
+  .mask-container {
+    transform: scale(0.8);
+  }
+  .skills {
+    row-gap: 2.4rem;
+    column-gap: 2.4rem;
+  }
+  .skill {
+    font-size: 3.2rem;
+  }
+  .cover {
+    transform: scale(0.25);
+  }
+  .bubble-text {
+    font-size: 2.4rem;
+  }
+}
+@media (max-width: 35em) {
+  .projects-section {
+    padding: 6rem 0rem;
+  }
+  .projects-section .section-header {
+    padding-left: 2rem;
+  }
+  .portfolio1-project,
+  .mapty-project,
+  .omnifood-project {
+    border-radius: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .mapty-content {
+    order: -1;
+  }
+  .portfolio-carousel-image,
+  .mapty-carousel-image,
+  .omnifood-carousel-image {
+    height: 24rem;
+    width: 40rem;
+  }
+  .portfolio-carousel,
+  .mapty-carousel,
+  .omnifood-carousel {
+    padding-bottom: 2rem;
+  }
+  .portfolio-carousel-image img,
+  .mapty-carousel-image img,
+  .omnifood-carousel-image img {
+    transform: scale(0.18);
+  }
+  .horizontal-scroll-section {
+    flex-direction: column;
+  }
+  .skills-section {
+    height: auto;
+  }
+  .contact-me-wrapper {
+    display: none;
+  }
+  .animated-text {
+    left: -10rem;
+  }
+  .contact-wrapper {
+    background-image: linear-gradient(
+      to bottom,
+      var(--color-brand--2),
+      var(--color-brand--1)
+    );
+  }
+  .mask-container {
+    transform: scale(0.6);
+  }
+  .skills-section {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 3fr 2fr;
+  }
+  .skills {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  }
+  .footer-section {
+    margin-top: 0;
+  }
+}

@@ -5,13 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="general.css" />
     <link rel="stylesheet" href="./winter/winter.css" />
-    <link href="https://fonts.cdnfonts.com/css/colus" rel="stylesheet" />
+    <link rel="stylesheet" href="./queries.css" />
+    <link
+      crossorigin="anonymous"
+      href="https://fonts.cdnfonts.com/css/colus"
+      rel="stylesheet"
+    />
     <title>Nakul_portfolio</title>
   </head>
   <body>
     <div class="cursor"></div>
+    <nav class="nav-bar cursor-invert">
+      <a href="#hero-section"><h3 class="blendDiff">NAKUL</h3></a>
 
-    <div class="winter_main">
+      <div class="nav-progress-bar">
+        <div class="progress-bar"></div>
+      </div>
+
+      <a href="#projects-section"><h3 class="blendDiff">PROJECTS</h3></a>
+
+      <a href="#skills-section"><h3 class="blendDiff">SKILLS</h3></a>
+
+      <!-- <a href="#contact-section"><h3 class="blendDiff">CONTACT</h3></a> -->
+    </nav>
+    <div class="winter_main" id="hero-section">
       <div class="winter_top">
         <h1 class="winter_top-h1 cursor-scale">Hey, I'm</h1>
       </div>
@@ -32,13 +49,17 @@
       </div>
     </div>
 
-    <section class="projects-section cursor-invert">
+    <section class="projects-section cursor-invert" id="projects-section">
       <h2 class="section-header">PROJECTS</h2>
       <div class="projects winter_projects">
         <div class="portfolio1-project">
           <div class="portfolio-content">
-            <div class="project-heading">
-              <h3 class="cursor-scale">Portfolio v1.0</h3>
+            <div class="project-heading cursor-scale">
+              <a
+                class="project-link"
+                href="https://nakul211-portfolio.netlify.app/"
+                >Portfolio v1.0</a
+              >
             </div>
             <div class="project-description">
               A website to represent my current skills and the projects in the
@@ -53,19 +74,19 @@
           <div class="portfolio-carousel">
             <div class="portfolio-slider">
               <div class="portfolio-slide portfolio-carousel-image">
-                <img src="static/portfolio-1.png" alt="portfolio picture 1" />
+                <img src="static/portfolio-1.webp" alt="portfolio picture 1" />
               </div>
 
               <div class="portfolio-slide portfolio-carousel-image">
-                <img src="static/portfolio-2.png" alt="portfolio picture 2" />
+                <img src="static/portfolio-2.webp" alt="portfolio picture 2" />
               </div>
 
               <div class="portfolio-slide portfolio-carousel-image">
-                <img src="static/portfolio-3.png" alt="portfolio picture 3" />
+                <img src="static/portfolio-3.webp" alt="portfolio picture 3" />
               </div>
               <div class="portfolio-slide portfolio-carousel-image">
                 <img
-                  src="static/portfolio-mobile-collage.png"
+                  src="static/portfolio-mobile-collage.webp"
                   alt="portfolio mobile collage"
                 />
               </div>
@@ -85,16 +106,16 @@
           <div class="mapty-carousel">
             <div class="mapty-slider">
               <div class="mapty-slide mapty-carousel-image">
-                <img src="static/mapty-1.png" alt="mapty picture 1" />
+                <img src="static/mapty-1.webp" alt="mapty picture 1" />
               </div>
 
               <div class="mapty-slide mapty-carousel-image">
-                <img src="static/mapty-2.png" alt="mapty picture 2" />
+                <img src="static/mapty-2.webp" alt="mapty picture 2" />
               </div>
 
               <div class="mapty-slide mapty-carousel-image">
                 <img
-                  src="static/mapty-mobile-collage.png"
+                  src="static/mapty-mobile-collage.webp"
                   alt="mapty picture 3"
                 />
               </div>
@@ -108,7 +129,14 @@
             </div>
           </div>
           <div class="mapty-content">
-            <div class="project-heading">Mapty</div>
+            <div class="project-heading cursor-scale">
+              <a
+                class="project-link"
+                href="https://javascript-project-nakul.netlify.app/"
+              >
+                Mapty</a
+              >
+            </div>
             <div class="project-description">
               Workout tracking site to store a record of your activities with
               their location pinned to them using Object Oriented Programmings
@@ -123,7 +151,13 @@
         </div>
         <div class="omnifood-project">
           <div class="omnifood-content">
-            <div class="project-heading">OMNIFOOD</div>
+            <div class="project-heading cursor-scale">
+              <a
+                class="project-link"
+                href="https://omnifood-nakul-csshtmlproject.netlify.app/"
+                >OMNIFOOD</a
+              >
+            </div>
             <div class="project-description">
               This page presents users with different subscription options
               available, such as weekly, monthly, or annual plans, each with
@@ -137,19 +171,19 @@
           <div class="omnifood-carousel">
             <div class="omnifood-slider">
               <div class="omnifood-slide omnifood-carousel-image">
-                <img src="static/omnifood-1.png" alt="omniood picture 1" />
+                <img src="static/omnifood-1.webp" alt="omniood picture 1" />
               </div>
 
               <div class="omnifood-slide omnifood-carousel-image">
-                <img src="static/omnifood-2.png" alt="omnifood picture 2" />
+                <img src="static/omnifood-2.webp" alt="omnifood picture 2" />
               </div>
 
               <div class="omnifood-slide omnifood-carousel-image">
-                <img src="static/omnifood-3.png" alt="omnifood picture 3" />
+                <img src="static/omnifood-3.webp" alt="omnifood picture 3" />
               </div>
               <div class="omnifood-slide omnifood-carousel-image">
                 <img
-                  src="static/omnifood-mobile-collage.png"
+                  src="static/omnifood-mobile-collage.webp"
                   alt="omnifood mobile collage"
                 />
               </div>
@@ -165,14 +199,14 @@
       </div>
     </section>
     <section class="horizontal-scroll-section cursor-invert">
-      <div class="skills-section cursor-invert">
+      <div class="skills-section cursor-invert" id="skills-section">
         <div class="circle-mask">
           <div class="mask-container">
-            <img class="cover" src="static/Nakul.jpg" alt="Nakul" />
+            <img class="cover" src="static/Nakul.webp" alt="Nakul" />
           </div>
         </div>
         <div class="skills-content">
-          <h3 class="section-header">SKILLS</h3>
+          <h4 class="section-header">SKILLS</h4>
           <div class="skills-description">
             <div class="skills">
               <ion-icon class="skill" name="logo-html5"></ion-icon>
@@ -191,22 +225,91 @@
             <div>
               <div id="resume-container">
                 <div class="resume-wrap">
-                  <span class="resume-btn"><a>RESUME</a></span>
+                  <span class="resume-btn"
+                    ><a href="/static/Nakul Rawat.pdf" target="_blank"
+                      >RESUME</a
+                    ></span
+                  >
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="contact-me-wrapper">
+      <div class="contact-me-wrapper" id="contact-section">
         <h1 class="animated-text" data-text-value="CONTACT ME">HELLO THERE</h1>
       </div>
       <div class="contact-wrapper">
-        <div class="bubble-text text">NAKULRAWAT211@GMAIL.COM</div>
-        <div class="bubble-text text cursor-scale">8146499488</div>
+        <a href="mailto:nakulrawat211@gmail.com">
+          <div class="bubble-text text">NAKULRAWAT211@GMAIL.COM</div>
+        </a>
+        <a href="tel: +918146499488">
+          <div class="bubble-text text cursor-scale">8146499488</div>
+        </a>
       </div>
     </section>
-    <footer class="footer-section"></footer>
+    <footer class="footer-section cursor-invert">
+      <div class="footer">
+        <!--Waves Container-->
+        <div class="footer-waves">
+          <svg
+            class="waves"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="0 24 150 28"
+            preserveAspectRatio="none"
+            shape-rendering="auto"
+          >
+            <defs>
+              <path
+                id="gentle-wave"
+                d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"
+              />
+            </defs>
+            <g class="parallax">
+              <use
+                xlink:href="#gentle-wave"
+                x="48"
+                y="0"
+                fill="rgba(240, 236, 229,0.7"
+              />
+              <use
+                xlink:href="#gentle-wave"
+                x="48"
+                y="3"
+                fill="rgba(240, 236, 229,0.5)"
+              />
+              <use
+                xlink:href="#gentle-wave"
+                x="48"
+                y="5"
+                fill="rgba(240, 236, 229,0.3)"
+              />
+              <use xlink:href="#gentle-wave" x="48" y="7" fill="#f0ece5" />
+            </g>
+          </svg>
+        </div>
+      </div>
+      <div class="footer-content-container">
+        <div class="footer-content-wrapper">
+          <div class="footer-header"><h2>GET IN TOUCH</h2></div>
+          <div class="footer-content">
+            <a href="https://www.linkedin.com/in/nakul-rawat-3a8035217/"
+              ><ion-icon name="logo-linkedin"></ion-icon
+            ></a>
+            <a href="https://github.com/nakul-211"
+              ><ion-icon name="logo-github"></ion-icon
+            ></a>
+            <a href="https://www.instagram.com/nakulrawat211/"
+              ><ion-icon name="logo-instagram"></ion-icon
+            ></a>
+          </div>
+        </div>
+        <div class="copyright-content">
+          ©️2024 Nakul Rawat. All rights reserved
+        </div>
+      </div>
+    </footer>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
       integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="

@@ -43,6 +43,27 @@ invert.forEach((section) => {
     mouseCursor.classList.add("invert");
   });
 });
+//progress bar
+let scrollIndicator = document.querySelector(".progress-bar");
+let documentHeight = document.documentElement.scrollHeight;
+let viewportHeight = document.documentElement.clientHeight;
+console.log(viewportHeight);
+window.onscroll = function () {
+  if (scrollY > 200 && scrollY < 400) {
+    ScrollTrigger.refresh(true);
+    // heroSection();
+  }
+  // (scrollY > 200 && scrollY <= 300) ||
+  scrollIndicator.style.transform = `scaleX(${
+    scrollY / (documentHeight - viewportHeight)
+  })`;
+};
+// gsap.to(".progress-bar", {
+//   value: 100,
+//   scrollTrigger: {
+//     scrub: 0.5,
+//   },
+// });
 
 //carousel working
 const portfolioSlides = document.querySelectorAll(".portfolio-slide");
@@ -128,7 +149,6 @@ omnifoodGoToSlide(0);
 
 gsap.registerPlugin(ScrollTrigger);
 function mask_cover() {
-  ScrollTrigger.refresh(true);
   gsap.to(
     ".mask-container",
 
@@ -138,7 +158,7 @@ function mask_cover() {
         start: "center bottom",
         end: "bottom bottom",
         scrub: 2,
-        toggleActions: "restart pause none none",
+        // toggleActions: "restart pause none none",
       },
       height: "30rem",
       width: "30rem",
@@ -147,25 +167,11 @@ function mask_cover() {
   );
 }
 mask_cover();
-
 //horizontal scroll
 
 function horizontalScroll() {
   ScrollTrigger.refresh(true);
-
-  let hs = gsap
-    .timeline
-    //   {
-    //   scrollTrigger: {
-    //     trigger: ".horizontal-scroll-section",
-    //     pin: true,
-    //     scrub: 2,
-    //     markers: true,
-    //     start: "top top",
-    //     end: "150% center",
-    //   },
-    // }
-    ();
+  let hs = gsap.timeline();
   hs.to(
     ".horizontal-scroll-section",
     {
@@ -174,15 +180,14 @@ function horizontalScroll() {
         trigger: ".skills-section",
         start: "bottom bottom",
         end: "bottom top",
-        // pinSpacing: true,
-        // markers: true,
         scrub: 2,
-        // markers: true,
+
         pin: ".horizontal-scroll-section",
       },
     },
     "skill-scroll"
   );
+  ScrollTrigger.refresh(true);
   hs.to(".animated-text", {
     left: "150vw",
     top: "25vh",
@@ -191,42 +196,12 @@ function horizontalScroll() {
       trigger: ".skills-section",
       start: "bottom bottom",
       end: "bottom top",
-      markers: true,
+      // markers: true,
       scrub: 2,
       pin: true,
-      // toggleActions: "restart pause pause pause",
-      // once: true,
-      // pinSpacing: true,
     },
   });
-  // .to(
-  //   ".contact-section",
-  //   {
-  //     xPercent: -100,
-  //     scrollTrigger: {
-  //       trigger: ".contact-section",
-  //       end: "+=3000",
-  //       pinSpacing: true,
-  //       scrub: 2,
-  //       markers: true,
-  //       pin: ".animated-text",
-  //     },
-  //   },
-  //   ">"
-  // );
-  // .to(
-  //   ".animated-text",
-  //   {
-  //     translateY: "-6.4rem",
-  //     pin: ".contact-section",
-  //     scrub: 2,
-  //   },
-  //   ">"
-  // );
-  // .to(
-  //   ".contact-section",
-  //   { xPercent: -100 / 2, ease: "none", scrub: 2, pin: ".animated-text" },
-  //   ">"
-  // );
 }
-horizontalScroll();
+if (window.innerWidth >= 560) {
+  horizontalScroll();
+}
