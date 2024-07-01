@@ -157,8 +157,9 @@ paragraph default:1.6
   padding: 5px 23px 5px 10px;
   transition: all 0.6s ease;
 }
-.resume-btn a:visited {
-  color: var(--color-brand--4);
+.resume-btn a {
+  color: var(--color-brand--3);
+  cursor: none;
 }
 
 .resume-btn:before {
@@ -187,8 +188,7 @@ paragraph default:1.6
   width: 1.1em;
   height: 1.1em;
 }
-.resume-btn:hover,
-.resume-btn a:visited:hover {
+.resume-btn a:hover {
   transition: all 0.6s ease;
   transition-delay: 0.3s;
   color: var(--color-brand--1);

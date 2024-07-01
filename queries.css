@@ -44,7 +44,7 @@ medium:11px
     transform: scale(0.35);
   }
   .cover {
-    transform: scale(0.6);
+    transform: scale(0.5);
   }
 }
 @media (max-width: 90em) {
@@ -257,6 +257,9 @@ medium:11px
   }
 }
 @media (max-width: 35em) {
+  .nav-bar {
+    top: 90vh;
+  }
   .projects-section {
     padding: 6rem 0rem;
   }

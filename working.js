@@ -49,7 +49,7 @@ let documentHeight = document.documentElement.scrollHeight;
 let viewportHeight = document.documentElement.clientHeight;
 console.log(viewportHeight);
 window.onscroll = function () {
-  if (scrollY > 200 && scrollY < 400) {
+  if (scrollY > 300 && scrollY < 350) {
     ScrollTrigger.refresh(true);
     // heroSection();
   }
