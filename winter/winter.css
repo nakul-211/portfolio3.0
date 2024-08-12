@@ -31,6 +31,16 @@ paragraph default:1.6
   --font-weight-3: 700;
   --font-weight-4: 800;
 }
+.reveal {
+  scale: 0.94;
+  opacity: 0;
+  transition: 0.9s;
+}
+.reveal_active {
+  opacity: 1;
+  top: 0;
+  scale: 1;
+}
 
 .winter_main-p {
   width: 100%;
@@ -206,7 +216,12 @@ paragraph default:1.6
   font-family: "Space Mono", monospace;
   height: 100vh;
   width: 100vw;
-  font-size: 3.6rem;
+  /* display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: rem; */
+  font-size: 3.2rem;
   font-weight: var(--font-weight-4);
   color: var(--color-brand--4);
   position: relative;
@@ -215,6 +230,16 @@ paragraph default:1.6
     var(--color-brand--2),
     var(--color-brand--1)
   );
+}
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.contact-wrapper h3 {
+  font-size: 1.6rem;
+  color: var(--color-brand--4);
 }
 .animated-text {
   letter-spacing: 4px;
@@ -230,7 +255,7 @@ paragraph default:1.6
 .bubble-text {
   font-family: "Colus", sans-serif;
   /* font-size: clamp(2rem, calc(2rem + 3.5vw), 8rem); */
-  font-size: 3.6rem;
+  font-size: 2.8rem;
   color: hsl(0, 0%, 50%);
   user-select: none;
 
@@ -269,13 +294,15 @@ paragraph default:1.6
   }
 }
 .contact-wrapper {
-  height: 100vh;
+  /* height: 100vh; */
   width: 100vw;
+  height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
   background-color: var(--color-brand--1);
+  gap: 1.2rem;
 }
 .contact-wrapper a {
   cursor: none;

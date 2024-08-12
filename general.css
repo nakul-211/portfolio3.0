@@ -63,7 +63,7 @@ body {
   position: relative;
   height: 100%;
   width: 100%;
-  font-family: "Colus", sans-serif;
+  font-family: "Colus", sans-serif !important;
   display: flex;
   flex-direction: column;
 }
@@ -80,7 +80,7 @@ body {
   padding: 1.2rem 0.6rem;
   border: solid 0.2rem hsla(38, 27%, 92%, 0.501);
   border-radius: 0.8rem;
-  background-color: hsla(231, 38%, 14%, 0.699);
+  background-color: hsla(231, 38%, 14%, 0.604);
   backdrop-filter: blur(5px);
 }
 
@@ -106,6 +106,7 @@ body {
 .blendDiff {
   color: var(--color-brand--3);
   transition: all 0.2s;
+  /* mix-blend-mode: difference; */
 }
 .blendDiff:hover {
   columns: var(--color-brand--4);
@@ -411,19 +412,70 @@ body {
   background-color: var(--color-brand--1);
   position: relative;
 }
+form {
+  display: grid;
+  /* grid-template-rows: 1fr 1fr; */
+  grid-template-columns: 1fr 1fr;
+  font-size: 1.6rem;
+  column-gap: 3.2rem;
+  row-gap: 1.6rem;
+  /* cursor: none; */
+  /* cursor: none; */
 
+  color: var(--color-brand--4);
+}
+.btn--forum {
+  color: var(--color-brand--1);
+  grid-column: 1 / span 2;
+  background-color: var(--color-brand--3);
+  align-self: center;
+  justify-self: center;
+  height: 3.2rem;
+  font-size: 1.4rem;
+  font-family: "Colus", sans-serif !important;
+  font-weight: var(--font-weight-3);
+  border-radius: 1.6rem;
+  transition: all 0.2s;
+  cursor: none;
+}
+.btn--forum:hover {
+  color: var(--color-brand--1);
+  background-color: var(--color-brand--4);
+}
+.cta-form label {
+  display: block;
+  font-size: 1.4rem;
+  cursor: none;
+}
+.cta-form input,
+.cta-form select {
+  width: 100%;
+  padding: 0.2rem;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 0.2rem;
+}
+.cta-form::placeholder {
+  color: #aaa;
+}
+.cta-form button {
+  width: 40%;
+}
 /*footer section*/
 .footer-section {
-  height: 70vh;
+  height: 80vh;
   margin-top: 100vh;
   display: flex;
   flex-direction: column;
+  /* align-items: flex-end; */
+  justify-content: flex-end;
+  background-color: var(--color-brand--1);
 }
 .footer {
   text-align: center;
   background: #161a30;
   color: white;
-  height: 30vh;
+  height: 20vh;
 }
 .footer-waves {
   height: 100%;
@@ -438,7 +490,7 @@ body {
 
 .waves {
   width: 100%;
-  height: 30vh;
+  height: 20vh;
   margin-bottom: -7px; /*Fix for safari gap*/
   /*   max-height:10vw; */
 }

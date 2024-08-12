@@ -57,7 +57,7 @@ medium:11px
     transform: scale(0.35);
   }
   .cover {
-    transform: scale(0.5);
+    transform: scale(0.4);
   }
 }
 @media (max-width: 85em) {
@@ -304,15 +304,29 @@ medium:11px
   .contact-me-wrapper {
     display: none;
   }
+  .bubble-text {
+    font-size: 2rem;
+  }
   .animated-text {
     left: -10rem;
   }
   .contact-wrapper {
+    /* height: 60vh; */
+    padding: 3.2rem;
     background-image: linear-gradient(
       to bottom,
       var(--color-brand--2),
       var(--color-brand--1)
     );
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
+    gap: 2.4rem;
+
+    /* grid-template-columns: 1fr; */
   }
   .mask-container {
     transform: scale(0.6);

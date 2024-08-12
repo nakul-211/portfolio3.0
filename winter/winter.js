@@ -26,30 +26,6 @@ function heroSection() {
     .from(".winter_hero .winter_img", { y: "100%", scale: 0, opacity: 0 });
 }
 heroSection();
-// function image_mask() {
-//   ScrollTrigger.refresh(true);
-//   gsap.to(".mask-container", {
-//     scrollTrigger: {
-//       trigger: ".mask-container",
-//       // end: "bottom bottom",
-//       scrub: true,
-//       toggleAction: "restart none none reset",
-//       pin: ".mask-container",
-//     },
-//     height: "32vw",
-//     width: "32vw",
-//     duration: 4,
-//   });
-// }
-// let chck_if_gsap_loaded = setInterval(function () {
-//   const screenSize = window.screen.width >= 1025;
-//   if (window.gsap && window.ScrollTrigger && screenSize) {
-//     console.log(Boolean(window.gsap));
-//     console.log(Boolean(window.ScrollTrigger));
-//     image_mask();
-//     clearInterval(chck_if_gsap_loaded);
-//   }
-// }, 1000);
 
 //animated text
 const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -86,13 +62,28 @@ function changeTextLetter(event) {
 }
 
 const animTexts = document.querySelectorAll(".animated-text");
-
+console.log(scrollY);
 animTexts.forEach((element) => {
   element.addEventListener("mouseover", () => {
     changeTextLetter(event);
   });
 });
-
+// let revealFlag = true;
+// window.addEventListener("scroll", () => {
+//   if (
+//     scrollY > document.documentElement.scrollHeight - 2 * windowHeight &&
+//     revealFlag
+//   ) {
+//     changeTextLetter(event);
+//     setTimeout(function () {
+//       revealFlag = false;
+//     }, 1000);
+//     // revealFlag = false;
+//     console.log(revealFlag);
+//     clearInterval(interval);
+//     return;
+//   }
+// });
 //contact
 function splitTextIntoSpans(target) {
   let elements = document.querySelectorAll(target);

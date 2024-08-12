@@ -43,16 +43,34 @@ invert.forEach((section) => {
     mouseCursor.classList.add("invert");
   });
 });
+//scroll reveal
+let windowHeight = window.innerHeight;
+console.log(document.documentElement.scrollHeight - 2 * windowHeight);
+function scrollReveal() {
+  var revealPoint = 0.1 * windowHeight;
+  var revealElement = document.querySelectorAll(".reveal");
+  for (var i = 0; i < revealElement.length; i++) {
+    var revealTop = revealElement[i].getBoundingClientRect().top;
+    if (revealTop < windowHeight - revealPoint) {
+      revealElement[i].classList.add("reveal_active");
+    } else {
+      revealElement[i].classList.remove("reveal_active");
+    }
+  }
+}
+
+window.addEventListener("scroll", scrollReveal);
+
 //progress bar
 let scrollIndicator = document.querySelector(".progress-bar");
 let documentHeight = document.documentElement.scrollHeight;
-let viewportHeight = document.documentElement.clientHeight;
-console.log(viewportHeight);
+let viewportHeight = windowHeight;
+console.log(viewportHeight, "hey", documentHeight);
 window.onscroll = function () {
-  if (scrollY > 300 && scrollY < 350) {
-    ScrollTrigger.refresh(true);
-    // heroSection();
-  }
+  // if (scrollY > 300 && scrollY < 350) {
+  //   ScrollTrigger.refresh(true);
+  //   // heroSection();
+  // }
   // (scrollY > 200 && scrollY <= 300) ||
   scrollIndicator.style.transform = `scaleX(${
     scrollY / (documentHeight - viewportHeight)
@@ -190,7 +208,7 @@ function horizontalScroll() {
   ScrollTrigger.refresh(true);
   hs.to(".animated-text", {
     left: "150vw",
-    top: "25vh",
+    top: "35vh",
     ease: "none",
     scrollTrigger: {
       trigger: ".skills-section",
