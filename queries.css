@@ -38,7 +38,7 @@ medium:11px
   html {
     font-size: 100%;
   }
-  .portfolio-carousel-image img,
+
   .mapty-carousel-image img,
   .omnifood-carousel-image img {
     transform: scale(0.35);
@@ -51,7 +51,6 @@ medium:11px
   html {
     font-size: 100%;
   }
-  .portfolio-carousel-image img,
   .mapty-carousel-image img,
   .omnifood-carousel-image img {
     transform: scale(0.35);
@@ -67,7 +66,6 @@ medium:11px
   .winter_hero .winter_img img {
     transform: scale(0.8);
   }
-  .portfolio-content,
   .mapty-content,
   .omnifood-content {
     font-size: 1.6rem;
@@ -77,13 +75,11 @@ medium:11px
     justify-content: center;
     gap: 2rem;
   }
-  .portfolio-carousel-image,
   .mapty-carousel-image,
   .omnifood-carousel-image {
     height: 21rem;
     width: 35rem;
   }
-  .portfolio-carousel-image img,
   .mapty-carousel-image img,
   .omnifood-carousel-image img {
     transform: scale(0.25);
@@ -116,23 +112,15 @@ medium:11px
   .projects-section {
     padding: 10rem 6rem;
   }
-  .portfolio1-project,
   .mapty-project,
   .omnifood-project {
     padding: 4rem 2rem;
   }
-  .portfolio-content,
   .mapty-content,
   .omnifood-content {
     padding: 4.2rem;
   }
-  /* .portfolio-carousel-image,
-  .mapty-carousel-image,
-  .omnifood-carousel-image {
-    height: 18rem;
-    width: 30rem;
-  } */
-  .portfolio-carousel-image img,
+
   .mapty-carousel-image img,
   .omnifood-carousel-image img {
     transform: scale(0.22);
@@ -151,17 +139,14 @@ medium:11px
   .projects {
     gap: 6rem;
   }
-  .portfolio1-project,
   .mapty-project,
   .omnifood-project {
     padding: 3.2rem 2.4rem;
   }
-  .portfolio-content,
   .mapty-content,
   .omnifood-content {
     padding: 2.4rem;
   }
-  .portfolio-carousel-image img,
   .mapty-carousel-image img,
   .omnifood-carousel-image img {
     transform: scale(0.2);
@@ -180,28 +165,23 @@ medium:11px
   .projects-section {
     padding: 10rem 4rem;
   }
-  .portfolio1-project,
   .mapty-project,
   .omnifood-project {
     padding: 3.2rem 2.4rem;
   }
-  .portfolio-content,
   .mapty-content,
   .omnifood-content {
     padding: 2.4rem;
   }
-  .portfolio-carousel-image,
   .mapty-carousel-image,
   .omnifood-carousel-image {
     height: 18rem;
     width: 30rem;
   }
-  .portfolio-carousel-image img,
   .mapty-carousel-image img,
   .omnifood-carousel-image img {
     transform: scale(0.17);
   }
-  .portfolio-slider__btn,
   .mapty-slider__btn,
   .omnifood-slider__btn {
     height: 3rem;
@@ -229,12 +209,10 @@ medium:11px
   .projects-section {
     padding: 6rem 2rem;
   }
-  .portfolio-content,
   .mapty-content,
   .omnifood-content {
     gap: 1.4rem;
   }
-  .portfolio-carousel-image img,
   .mapty-carousel-image img,
   .omnifood-carousel-image img {
     transform: scale(0.14);
@@ -266,7 +244,6 @@ medium:11px
   .projects-section .section-header {
     padding-left: 2rem;
   }
-  .portfolio1-project,
   .mapty-project,
   .omnifood-project {
     border-radius: 0;
@@ -279,18 +256,15 @@ medium:11px
   .mapty-content {
     order: -1;
   }
-  .portfolio-carousel-image,
   .mapty-carousel-image,
   .omnifood-carousel-image {
     height: 24rem;
     width: 40rem;
   }
-  .portfolio-carousel,
   .mapty-carousel,
   .omnifood-carousel {
     padding-bottom: 2rem;
   }
-  .portfolio-carousel-image img,
   .mapty-carousel-image img,
   .omnifood-carousel-image img {
     transform: scale(0.18);

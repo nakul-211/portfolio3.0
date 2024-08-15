@@ -168,7 +168,6 @@ body {
   gap: 6rem;
 }
 
-.portfolio1-project,
 .mapty-project,
 .omnifood-project {
   display: grid;
@@ -179,16 +178,14 @@ body {
   justify-items: center;
   align-items: center;
 }
-.portfolio1-project {
-  grid-template-columns: 4fr 5fr;
-}
+
 .mapty-project {
   grid-template-columns: 5fr 4fr;
 }
 .omnifood-project {
   grid-template-columns: 4fr 5fr;
 }
-.portfolio-content,
+
 .mapty-content,
 .omnifood-content {
   font-size: 1.6rem;
@@ -218,7 +215,7 @@ body {
   color: var(--color-brand--2);
   font-size: 3.6rem;
 }
-.portfolio-carousel,
+
 .mapty-carousel,
 .omnifood-carousel {
   height: auto;
@@ -228,7 +225,7 @@ body {
   justify-content: center;
   /* overflow: hidden; */
 }
-.portfolio-carousel-image,
+
 .mapty-carousel-image,
 .omnifood-carousel-image {
   display: flex;
@@ -248,14 +245,13 @@ body {
 .omnifood-carousel-image {
   background-color: #e67e22;
 }
-.portfolio-carousel-image img,
+
 .mapty-carousel-image img,
 .omnifood-carousel-image img {
   transform: scale(0.35);
   object-fit: cover;
 }
 
-.portfolio-slider,
 .mapty-slider,
 .omnifood-slider {
   align-items: center;
@@ -266,34 +262,32 @@ body {
   overflow-x: hidden;
   box-shadow: 0 0 2.4rem 1rem rgba(0, 0, 0, 0.3);
 }
-.portfolio-slide,
+
 .mapty-slide,
 .omnifood-slide {
   transition: transform 1s;
 }
 
-.portfolio-slide:nth-child(2),
 .mapty-slide:nth-child(2),
 .omnifood-slide:nth-child(2) {
   position: absolute;
   top: 0%;
   width: 100%;
 }
-.portfolio-slide:nth-child(3),
+
 .mapty-slide:nth-child(3),
 .omnifood-slide:nth-child(3) {
   position: absolute;
   top: 0%;
   width: 100%;
 }
-.portfolio-slide:nth-child(4),
+
 .omnifood-slide:nth-child(4) {
   position: absolute;
   top: 0%;
   width: 100%;
 }
 
-.portfolio-slider__btn,
 .mapty-slider__btn,
 .omnifood-slider__btn {
   position: absolute;
@@ -312,14 +306,12 @@ body {
   cursor: none;
 }
 
-.portfolio-slider__btn--left,
 .mapty-slider__btn--left,
 .omnifood-slider__btn--left {
   left: 5%;
   transform: translate(-50%, -50%);
 }
 
-.portfolio-slider__btn--right,
 .mapty-slider__btn--right,
 .omnifood-slider__btn--right {
   right: 5%;

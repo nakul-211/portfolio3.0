@@ -84,33 +84,6 @@ window.onscroll = function () {
 // });
 
 //carousel working
-const portfolioSlides = document.querySelectorAll(".portfolio-slide");
-// const portfolioSlider = document.querySelector(".portfolio-slider");
-const portfolioBtnLeft = document.querySelector(".portfolio-slider__btn--left");
-const portfolioBtnRight = document.querySelector(
-  ".portfolio-slider__btn--right"
-);
-let portfolioCurrentSlide = 0;
-const portfolioMaxSlide = portfolioSlides.length;
-const portfolioGoToSlide = function (slide) {
-  portfolioSlides.forEach((s, i) => {
-    s.style.transform = `translateX(${(i - slide) * 100}%)`;
-  });
-};
-
-const portfolioNextSlide = function () {
-  portfolioCurrentSlide++;
-  if (portfolioCurrentSlide === portfolioMaxSlide) portfolioCurrentSlide = 0;
-  portfolioGoToSlide(portfolioCurrentSlide);
-};
-const portfolioPrevSlide = function () {
-  if (portfolioCurrentSlide === 0) portfolioCurrentSlide = portfolioMaxSlide;
-  portfolioCurrentSlide--;
-  portfolioGoToSlide(portfolioCurrentSlide);
-};
-portfolioBtnRight.addEventListener("click", portfolioNextSlide);
-portfolioBtnLeft.addEventListener("click", portfolioPrevSlide);
-portfolioGoToSlide(0);
 
 //mapty carousel
 const maptySlides = document.querySelectorAll(".mapty-slide");
