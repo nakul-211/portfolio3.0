@@ -40,7 +40,7 @@ medium:11px
   }
 
   .mapty-carousel-image img,
-  .omnifood-carousel-image img {
+  .usePopcorn-carousel-image img {
     transform: scale(0.35);
   }
   .cover {
@@ -52,7 +52,7 @@ medium:11px
     font-size: 100%;
   }
   .mapty-carousel-image img,
-  .omnifood-carousel-image img {
+  .usePopcorn-carousel-image img {
     transform: scale(0.35);
   }
   .cover {
@@ -67,7 +67,7 @@ medium:11px
     transform: scale(0.8);
   }
   .mapty-content,
-  .omnifood-content {
+  .usePopcorn-content {
     font-size: 1.6rem;
     padding: 2.4rem;
     display: flex;
@@ -76,12 +76,12 @@ medium:11px
     gap: 2rem;
   }
   .mapty-carousel-image,
-  .omnifood-carousel-image {
+  .usePopcorn-carousel-image {
     height: 21rem;
     width: 35rem;
   }
   .mapty-carousel-image img,
-  .omnifood-carousel-image img {
+  .usePopcorn-carousel-image img {
     transform: scale(0.25);
   }
   .project-skill {
@@ -113,16 +113,16 @@ medium:11px
     padding: 10rem 6rem;
   }
   .mapty-project,
-  .omnifood-project {
+  .usePopcorn-project {
     padding: 4rem 2rem;
   }
   .mapty-content,
-  .omnifood-content {
+  .usePopcorn-content {
     padding: 4.2rem;
   }
 
   .mapty-carousel-image img,
-  .omnifood-carousel-image img {
+  .usePopcorn-carousel-image img {
     transform: scale(0.22);
   }
 }
@@ -140,15 +140,15 @@ medium:11px
     gap: 6rem;
   }
   .mapty-project,
-  .omnifood-project {
+  .usePopcorn-project {
     padding: 3.2rem 2.4rem;
   }
   .mapty-content,
-  .omnifood-content {
+  .usePopcorn-content {
     padding: 2.4rem;
   }
   .mapty-carousel-image img,
-  .omnifood-carousel-image img {
+  .usePopcorn-carousel-image img {
     transform: scale(0.2);
   }
   .skills-section {
@@ -166,24 +166,24 @@ medium:11px
     padding: 10rem 4rem;
   }
   .mapty-project,
-  .omnifood-project {
+  .usePopcorn-project {
     padding: 3.2rem 2.4rem;
   }
   .mapty-content,
-  .omnifood-content {
+  .usePopcorn-content {
     padding: 2.4rem;
   }
   .mapty-carousel-image,
-  .omnifood-carousel-image {
+  .usePopcorn-carousel-image {
     height: 18rem;
     width: 30rem;
   }
   .mapty-carousel-image img,
-  .omnifood-carousel-image img {
+  .usePopcorn-carousel-image img {
     transform: scale(0.17);
   }
   .mapty-slider__btn,
-  .omnifood-slider__btn {
+  .usePopcorn-slider__btn {
     height: 3rem;
     width: 3rem;
   }
@@ -196,7 +196,12 @@ medium:11px
   html {
     font-size: 60%;
   }
-  .cursor {
+  .cursor,
+  .custom-cursor,
+  .reactQuiz-cursor,
+  .travelList-cursor,
+  .omnifood-cursor,
+  .portfolio-cursor {
     display: none;
   }
   .nav-bar {
@@ -210,11 +215,11 @@ medium:11px
     padding: 6rem 2rem;
   }
   .mapty-content,
-  .omnifood-content {
+  .usePopcorn-content {
     gap: 1.4rem;
   }
   .mapty-carousel-image img,
-  .omnifood-carousel-image img {
+  .usePopcorn-carousel-image img {
     transform: scale(0.14);
   }
   .mask-container {
@@ -245,7 +250,7 @@ medium:11px
     padding-left: 2rem;
   }
   .mapty-project,
-  .omnifood-project {
+  .usePopcorn-project {
     border-radius: 0;
     display: flex;
     flex-direction: column;
@@ -257,17 +262,28 @@ medium:11px
     order: -1;
   }
   .mapty-carousel-image,
-  .omnifood-carousel-image {
+  .usePopcorn-carousel-image {
     height: 24rem;
     width: 40rem;
   }
   .mapty-carousel,
-  .omnifood-carousel {
+  .usePopcorn-carousel {
     padding-bottom: 2rem;
   }
   .mapty-carousel-image img,
-  .omnifood-carousel-image img {
+  .usePopcorn-carousel-image img {
     transform: scale(0.18);
+  }
+  .miscellaneous-projects {
+    grid-template-columns: 1fr 1fr;
+  }
+  .reactQuiz-project {
+    border-top-left-radius: 0rem;
+    border-bottom-left-radius: 0rem;
+  }
+  .portfolio-project {
+    border-top-right-radius: 0rem;
+    border-bottom-right-radius: 0rem;
   }
   .horizontal-scroll-section {
     flex-direction: column;

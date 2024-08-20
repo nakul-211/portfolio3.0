@@ -109,12 +109,12 @@ body {
   /* mix-blend-mode: difference; */
 }
 .blendDiff:hover {
-  columns: var(--color-brand--4);
+  color: var(--color-brand--4);
 }
 /* .blendDiff:hover {
   border: solid 0.2rem var(--color-brand--4);
 } */
-.cursor {
+.custom-cursor {
   width: 2.5rem;
   height: 2.5rem;
   border: 2px solid;
@@ -128,6 +128,32 @@ body {
   transition: all 0.2 ease;
   transition: transform 0.3s ease;
   transform-origin: center center;
+}
+.reactQuiz-cursor,
+.travelList-cursor,
+.omnifood-cursor,
+.portfolio-cursor {
+  opacity: 0.9;
+  width: 16rem;
+  height: 10rem;
+  position: fixed;
+  z-index: 1000;
+
+  pointer-events: none;
+  transition: transform 0.2 ease;
+  transform: translate(0%, -100%);
+}
+.reactQuiz-cursor {
+  content: url(./static/reactquiz.webp);
+}
+.travelList-cursor {
+  content: url(./static/travelist.webp);
+}
+.omnifood-cursor {
+  content: url(./static/omnifood.webp);
+}
+.portfolio-cursor {
+  content: url(./static/portfolio.webp);
 }
 .grow,
 .grow-small {
@@ -152,7 +178,7 @@ body {
 .projects-section {
   display: flex;
   flex-direction: column;
-  margin-top: 50vh;
+  margin-top: 100vh;
   padding: 10rem 8rem;
   background-color: var(--color-brand--4);
   gap: 4rem;
@@ -169,7 +195,7 @@ body {
 }
 
 .mapty-project,
-.omnifood-project {
+.usePopcorn-project {
   display: grid;
   padding: 6rem 4rem;
   background-color: var(--color-brand--3);
@@ -182,12 +208,12 @@ body {
 .mapty-project {
   grid-template-columns: 5fr 4fr;
 }
-.omnifood-project {
+.usePopcorn-project {
   grid-template-columns: 4fr 5fr;
 }
 
 .mapty-content,
-.omnifood-content {
+.usePopcorn-content {
   font-size: 1.6rem;
   padding: 3.2rem;
   display: flex;
@@ -217,7 +243,7 @@ body {
 }
 
 .mapty-carousel,
-.omnifood-carousel {
+.usePopcorn-carousel {
   height: auto;
   width: auto;
   display: flex;
@@ -227,7 +253,7 @@ body {
 }
 
 .mapty-carousel-image,
-.omnifood-carousel-image {
+.usePopcorn-carousel-image {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -242,18 +268,18 @@ body {
 .mapty-carousel-image {
   background-color: #00c46a;
 }
-.omnifood-carousel-image {
-  background-color: #e67e22;
+.usePopcorn-carousel-image {
+  background-color: #212529;
 }
 
 .mapty-carousel-image img,
-.omnifood-carousel-image img {
+.usePopcorn-carousel-image img {
   transform: scale(0.35);
   object-fit: cover;
 }
 
 .mapty-slider,
-.omnifood-slider {
+.usePopcorn-slider {
   align-items: center;
   justify-content: center;
   position: relative;
@@ -264,32 +290,32 @@ body {
 }
 
 .mapty-slide,
-.omnifood-slide {
+.usePopcorn-slide {
   transition: transform 1s;
 }
 
 .mapty-slide:nth-child(2),
-.omnifood-slide:nth-child(2) {
+.usePopcorn-slide:nth-child(2) {
   position: absolute;
   top: 0%;
   width: 100%;
 }
 
 .mapty-slide:nth-child(3),
-.omnifood-slide:nth-child(3) {
+.usePopcorn-slide:nth-child(3) {
   position: absolute;
   top: 0%;
   width: 100%;
 }
 
-.omnifood-slide:nth-child(4) {
+/* .usePopcorn-slide:nth-child(4) {
   position: absolute;
   top: 0%;
   width: 100%;
-}
+} */
 
 .mapty-slider__btn,
-.omnifood-slider__btn {
+.usePopcorn-slider__btn {
   position: absolute;
   transform: translate(-50%, -50%);
   display: flex;
@@ -307,17 +333,61 @@ body {
 }
 
 .mapty-slider__btn--left,
-.omnifood-slider__btn--left {
+.usePopcorn-slider__btn--left {
   left: 5%;
   transform: translate(-50%, -50%);
 }
 
 .mapty-slider__btn--right,
-.omnifood-slider__btn--right {
+.usePopcorn-slider__btn--right {
   right: 5%;
   transform: translate(50%, -50%);
 }
 
+.miscellaneous-projects {
+  background-color: var(--color-brand--3);
+  border-radius: 0.6rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  align-content: center;
+  justify-items: center;
+  box-shadow: 0 0 2.4rem 1rem rgba(0, 0, 0, 0.2);
+
+  /* border: solid 0.2rem var(--color-brand--3); */
+}
+.reactQuiz-project,
+.travelList-project,
+.portfolio-project,
+.omnifood-project {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8rem;
+  text-decoration: none;
+  font-size: 1.4rem;
+  color: var(--color-brand--1);
+  /* padding: 0.8rem; */
+  padding: 1.2rem 2.4rem;
+  cursor: none;
+  transition: all 0.6s ease-in-out;
+}
+.reactQuiz-project:hover,
+.travelList-project:hover,
+.portfolio-project:hover,
+.omnifood-project:hover {
+  background-color: var(--color-brand--4);
+}
+.reactQuiz-project {
+  border-top-left-radius: 0.6rem;
+  border-bottom-left-radius: 0.6rem;
+}
+.portfolio-project {
+  border-top-right-radius: 0.6rem;
+  border-bottom-right-radius: 0.6rem;
+}
+/* SKILLS SECTION*/
 .skills-section {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -394,6 +464,8 @@ body {
 }
 .cover {
   transform: scale(0.4);
+  filter: brightness(80%);
+  opacity: 0.95;
 }
 
 /* horizontal scroll section*/

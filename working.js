@@ -3,7 +3,8 @@ let mouseCursor = document.querySelector(".cursor"),
   cursorScale = document.querySelectorAll(".cursor-scale"),
   mouseX = 0,
   mouseY = 0,
-  invert = document.querySelectorAll(".cursor-invert");
+  invert = document.querySelectorAll(".cursor-invert"),
+  miscellaneousProjects = document.querySelectorAll(".project-cursor");
 gsap.to({}, 0.005, {
   repeat: -1,
 
@@ -16,7 +17,37 @@ gsap.to({}, 0.005, {
     });
   },
 });
-
+function removeCustomCursors() {
+  mouseCursor.classList.remove("reactQuiz-cursor");
+  mouseCursor.classList.remove("travelList-cursor");
+  mouseCursor.classList.remove("omnifood-cursor");
+  mouseCursor.classList.remove("portfolio-cursor");
+  mouseCursor.classList.remove("custom-cursor");
+}
+miscellaneousProjects.forEach((project) => {
+  project.addEventListener("mouseenter", function (e) {
+    const currentProject = e.target.classList;
+    if (currentProject.value.includes("reactQuiz-project")) {
+      removeCustomCursors();
+      mouseCursor.classList.add("reactQuiz-cursor");
+    } else if (currentProject.value.includes("travelList-project")) {
+      removeCustomCursors();
+      mouseCursor.classList.add("travelList-cursor");
+    } else if (currentProject.value.includes("omnifood-project")) {
+      removeCustomCursors();
+      mouseCursor.classList.add("omnifood-cursor");
+    } else if (currentProject.value.includes("portfolio-project")) {
+      removeCustomCursors();
+      mouseCursor.classList.add("portfolio-cursor");
+    }
+  });
+});
+document
+  .querySelector(".miscellaneous-projects")
+  .addEventListener("mouseleave", () => {
+    removeCustomCursors();
+    mouseCursor.classList.add("custom-cursor");
+  });
 window.addEventListener("mousemove", function (e) {
   mouseX = e.clientX;
   mouseY = e.clientY;
@@ -113,30 +144,34 @@ maptyGoToSlide(0);
 
 //omnifood working
 
-const omnifoodSlides = document.querySelectorAll(".omnifood-slide");
-const omnifoodBtnLeft = document.querySelector(".omnifood-slider__btn--left");
-const omnifoodBtnRight = document.querySelector(".omnifood-slider__btn--right");
-let omnifoodCurrentSlide = 0;
-const omnifoodMaxSlide = omnifoodSlides.length;
-const omnifoodGoToSlide = function (slide) {
-  omnifoodSlides.forEach((s, i) => {
+const usePopcornSlides = document.querySelectorAll(".usePopcorn-slide");
+const usePopcornBtnLeft = document.querySelector(
+  ".usePopcorn-slider__btn--left"
+);
+const usePopcornBtnRight = document.querySelector(
+  ".usePopcorn-slider__btn--right"
+);
+let usePopcornCurrentSlide = 0;
+const usePopcornMaxSlide = usePopcornSlides.length;
+const usePopcornGoToSlide = function (slide) {
+  usePopcornSlides.forEach((s, i) => {
     s.style.transform = `translateX(${(i - slide) * 100}%)`;
   });
 };
 
-const omnifoodNextSlide = function () {
-  omnifoodCurrentSlide++;
-  if (omnifoodCurrentSlide === omnifoodMaxSlide) omnifoodCurrentSlide = 0;
-  omnifoodGoToSlide(omnifoodCurrentSlide);
+const usePopcornNextSlide = function () {
+  usePopcornCurrentSlide++;
+  if (usePopcornCurrentSlide === usePopcornMaxSlide) usePopcornCurrentSlide = 0;
+  usePopcornGoToSlide(usePopcornCurrentSlide);
 };
-const omnifoodPrevSlide = function () {
-  if (omnifoodCurrentSlide === 0) omnifoodCurrentSlide = omnifoodMaxSlide;
-  omnifoodCurrentSlide--;
-  omnifoodGoToSlide(omnifoodCurrentSlide);
+const usePopcornPrevSlide = function () {
+  if (usePopcornCurrentSlide === 0) usePopcornCurrentSlide = usePopcornMaxSlide;
+  usePopcornCurrentSlide--;
+  usePopcornGoToSlide(usePopcornCurrentSlide);
 };
-omnifoodBtnRight.addEventListener("click", omnifoodNextSlide);
-omnifoodBtnLeft.addEventListener("click", omnifoodPrevSlide);
-omnifoodGoToSlide(0);
+usePopcornBtnRight.addEventListener("click", usePopcornNextSlide);
+usePopcornBtnLeft.addEventListener("click", usePopcornPrevSlide);
+usePopcornGoToSlide(0);
 
 gsap.registerPlugin(ScrollTrigger);
 function mask_cover() {
