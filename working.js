@@ -117,30 +117,30 @@ window.onscroll = function () {
 //carousel working
 
 //mapty carousel
-const maptySlides = document.querySelectorAll(".mapty-slide");
-const maptyBtnLeft = document.querySelector(".mapty-slider__btn--left");
-const maptyBtnRight = document.querySelector(".mapty-slider__btn--right");
-let maptyCurrentSlide = 0;
-const maptyMaxSlide = maptySlides.length;
-const maptyGoToSlide = function (slide) {
-  maptySlides.forEach((s, i) => {
+const pizzaSlides = document.querySelectorAll(".pizza-slide");
+const pizzaBtnLeft = document.querySelector(".pizza-slider__btn--left");
+const pizzaBtnRight = document.querySelector(".pizza-slider__btn--right");
+let pizzaCurrentSlide = 0;
+const pizzaMaxSlide = pizzaSlides.length;
+const pizzaGoToSlide = function (slide) {
+  pizzaSlides.forEach((s, i) => {
     s.style.transform = `translateX(${(i - slide) * 100}%)`;
   });
 };
 
-const maptyNextSlide = function () {
-  maptyCurrentSlide++;
-  if (maptyCurrentSlide === maptyMaxSlide) maptyCurrentSlide = 0;
-  maptyGoToSlide(maptyCurrentSlide);
+const pizzaNextSlide = function () {
+  pizzaCurrentSlide++;
+  if (pizzaCurrentSlide === pizzaMaxSlide) pizzaCurrentSlide = 0;
+  pizzaGoToSlide(pizzaCurrentSlide);
 };
-const maptyPrevSlide = function () {
-  if (maptyCurrentSlide === 0) maptyCurrentSlide = maptyMaxSlide;
-  maptyCurrentSlide--;
-  maptyGoToSlide(maptyCurrentSlide);
+const pizzaPrevSlide = function () {
+  if (pizzaCurrentSlide === 0) pizzaCurrentSlide = pizzaMaxSlide;
+  pizzaCurrentSlide--;
+  pizzaGoToSlide(pizzaCurrentSlide);
 };
-maptyBtnRight.addEventListener("click", maptyNextSlide);
-maptyBtnLeft.addEventListener("click", maptyPrevSlide);
-maptyGoToSlide(0);
+pizzaBtnRight.addEventListener("click", pizzaNextSlide);
+pizzaBtnLeft.addEventListener("click", pizzaPrevSlide);
+pizzaGoToSlide(0);
 
 //omnifood working
 

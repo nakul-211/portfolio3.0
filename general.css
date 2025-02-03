@@ -194,7 +194,7 @@ body {
   gap: 6rem;
 }
 
-.mapty-project,
+.pizza-project,
 .usePopcorn-project {
   display: grid;
   padding: 6rem 4rem;
@@ -205,14 +205,14 @@ body {
   align-items: center;
 }
 
-.mapty-project {
+.pizza-project {
   grid-template-columns: 5fr 4fr;
 }
 .usePopcorn-project {
   grid-template-columns: 4fr 5fr;
 }
 
-.mapty-content,
+.pizza-content,
 .usePopcorn-content {
   font-size: 1.6rem;
   padding: 3.2rem;
@@ -242,7 +242,7 @@ body {
   font-size: 3.6rem;
 }
 
-.mapty-carousel,
+.pizza-carousel,
 .usePopcorn-carousel {
   height: auto;
   width: auto;
@@ -252,7 +252,7 @@ body {
   /* overflow: hidden; */
 }
 
-.mapty-carousel-image,
+.pizza-carousel-image,
 .usePopcorn-carousel-image {
   display: flex;
   align-items: center;
@@ -265,20 +265,20 @@ body {
   /* transform: scale(0.5); */
   overflow: hidden;
 }
-.mapty-carousel-image {
-  background-color: #00c46a;
+.pizza-carousel-image {
+  background-color: #292524;
 }
 .usePopcorn-carousel-image {
   background-color: #212529;
 }
 
-.mapty-carousel-image img,
+.pizza-carousel-image img,
 .usePopcorn-carousel-image img {
   transform: scale(0.35);
   object-fit: cover;
 }
 
-.mapty-slider,
+.pizza-slider,
 .usePopcorn-slider {
   align-items: center;
   justify-content: center;
@@ -289,19 +289,25 @@ body {
   box-shadow: 0 0 2.4rem 1rem rgba(0, 0, 0, 0.3);
 }
 
-.mapty-slide,
+.pizza-slide,
 .usePopcorn-slide {
   transition: transform 1s;
 }
 
-.mapty-slide:nth-child(2),
+.pizza-slide:nth-child(2),
 .usePopcorn-slide:nth-child(2) {
   position: absolute;
   top: 0%;
   width: 100%;
 }
 
-.mapty-slide:nth-child(3),
+.pizza-slide:nth-child(3),
+.usePopcorn-slide:nth-child(3) {
+  position: absolute;
+  top: 0%;
+  width: 100%;
+}
+.pizza-slide:nth-child(4),
 .usePopcorn-slide:nth-child(3) {
   position: absolute;
   top: 0%;
@@ -314,7 +320,7 @@ body {
   width: 100%;
 } */
 
-.mapty-slider__btn,
+.pizza-slider__btn,
 .usePopcorn-slider__btn {
   position: absolute;
   transform: translate(-50%, -50%);
@@ -324,7 +330,6 @@ body {
   top: 50%;
   border: none;
   background: rgba(255, 255, 255, 0.5);
-
   border-radius: 50%;
   height: 4rem;
   width: 4rem;
@@ -332,13 +337,13 @@ body {
   cursor: none;
 }
 
-.mapty-slider__btn--left,
+.pizza-slider__btn--left,
 .usePopcorn-slider__btn--left {
   left: 5%;
   transform: translate(-50%, -50%);
 }
 
-.mapty-slider__btn--right,
+.pizza-slider__btn--right,
 .usePopcorn-slider__btn--right {
   right: 5%;
   transform: translate(50%, -50%);

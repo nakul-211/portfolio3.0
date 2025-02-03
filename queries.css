@@ -39,7 +39,7 @@ medium:11px
     font-size: 100%;
   }
 
-  .mapty-carousel-image img,
+  .pizza-carousel-image img,
   .usePopcorn-carousel-image img {
     transform: scale(0.35);
   }
@@ -51,7 +51,7 @@ medium:11px
   html {
     font-size: 100%;
   }
-  .mapty-carousel-image img,
+  .pizza-carousel-image img,
   .usePopcorn-carousel-image img {
     transform: scale(0.35);
   }
@@ -66,7 +66,7 @@ medium:11px
   .winter_hero .winter_img img {
     transform: scale(0.8);
   }
-  .mapty-content,
+  .pizza-content,
   .usePopcorn-content {
     font-size: 1.6rem;
     padding: 2.4rem;
@@ -75,12 +75,12 @@ medium:11px
     justify-content: center;
     gap: 2rem;
   }
-  .mapty-carousel-image,
+  .pizza-carousel-image,
   .usePopcorn-carousel-image {
     height: 21rem;
     width: 35rem;
   }
-  .mapty-carousel-image img,
+  .pizza-carousel-image img,
   .usePopcorn-carousel-image img {
     transform: scale(0.25);
   }
@@ -112,16 +112,16 @@ medium:11px
   .projects-section {
     padding: 10rem 6rem;
   }
-  .mapty-project,
+  .pizza-project,
   .usePopcorn-project {
     padding: 4rem 2rem;
   }
-  .mapty-content,
+  .pizza-content,
   .usePopcorn-content {
     padding: 4.2rem;
   }
 
-  .mapty-carousel-image img,
+  .pizza-carousel-image img,
   .usePopcorn-carousel-image img {
     transform: scale(0.22);
   }
@@ -139,15 +139,15 @@ medium:11px
   .projects {
     gap: 6rem;
   }
-  .mapty-project,
+  .pizza-project,
   .usePopcorn-project {
     padding: 3.2rem 2.4rem;
   }
-  .mapty-content,
+  .pizza-content,
   .usePopcorn-content {
     padding: 2.4rem;
   }
-  .mapty-carousel-image img,
+  .pizza-carousel-image img,
   .usePopcorn-carousel-image img {
     transform: scale(0.2);
   }
@@ -165,24 +165,24 @@ medium:11px
   .projects-section {
     padding: 10rem 4rem;
   }
-  .mapty-project,
+  .pizza-project,
   .usePopcorn-project {
     padding: 3.2rem 2.4rem;
   }
-  .mapty-content,
+  .pizza-content,
   .usePopcorn-content {
     padding: 2.4rem;
   }
-  .mapty-carousel-image,
+  .pizza-carousel-image,
   .usePopcorn-carousel-image {
     height: 18rem;
     width: 30rem;
   }
-  .mapty-carousel-image img,
+  .pizza-carousel-image img,
   .usePopcorn-carousel-image img {
     transform: scale(0.17);
   }
-  .mapty-slider__btn,
+  .pizza-slider__btn,
   .usePopcorn-slider__btn {
     height: 3rem;
     width: 3rem;
@@ -214,11 +214,11 @@ medium:11px
   .projects-section {
     padding: 6rem 2rem;
   }
-  .mapty-content,
+  .pizza-content,
   .usePopcorn-content {
     gap: 1.4rem;
   }
-  .mapty-carousel-image img,
+  .pizza-carousel-image img,
   .usePopcorn-carousel-image img {
     transform: scale(0.14);
   }
@@ -249,7 +249,7 @@ medium:11px
   .projects-section .section-header {
     padding-left: 2rem;
   }
-  .mapty-project,
+  .pizza-project,
   .usePopcorn-project {
     border-radius: 0;
     display: flex;
@@ -258,19 +258,19 @@ medium:11px
     justify-content: center;
   }
 
-  .mapty-content {
+  .pizza-content {
     order: -1;
   }
-  .mapty-carousel-image,
+  .pizza-carousel-image,
   .usePopcorn-carousel-image {
     height: 24rem;
     width: 40rem;
   }
-  .mapty-carousel,
+  .pizza-carousel,
   .usePopcorn-carousel {
     padding-bottom: 2rem;
   }
-  .mapty-carousel-image img,
+  .pizza-carousel-image img,
   .usePopcorn-carousel-image img {
     transform: scale(0.18);
   }
